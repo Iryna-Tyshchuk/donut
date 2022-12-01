@@ -1,2 +1,15 @@
 @import './common';
-@import './example';
+@import './utils/mixins';
+@import './utils/vars';
+@import './base/reset';
+@import './base/reusable-classes';
+
+@import './layouts/header';
+@import './layouts/aboutus';
+@import './layouts/program';
+@import './layouts/speakers';
+@import './layouts/price';
+@import './layouts/reviews';
+@import './layouts/registration';
+@import './layouts/contact';
+@import './layouts/footer';
