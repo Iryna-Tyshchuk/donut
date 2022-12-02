@@ -81,4 +81,17 @@
   text-align: center;
 
   color: #ffffff;
+  &:hover,
+  &:focus {
+    color: #f3848c;
+    background: #ffffff;
+    border: 1px solid #f3848c;
+  }
+  &:active {
+    color: #ffffff;
+    background: #f3848c;
+    border: 1px solid #ffffff;
+    box-shadow: inset 0px 4px 4px rgba(107, 66, 66, 0.25);
+    // filter: drop-shadow(10px 15px 25px rgba(232, 183, 183, 0.45));
+  }
 }
