@@ -21,8 +21,16 @@
 }
 
 .section {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include desktop {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .section__title {
@@ -40,5 +48,20 @@
     font-weight: 500;
     font-size: 32px;
     line-height: 1.21;
+  }
+}
+.section__subtitle {
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+
+  color: #2e2520;
+
+  @include desktop {
+    font-size: 20px;
+    line-height: 1.2;
   }
 }
