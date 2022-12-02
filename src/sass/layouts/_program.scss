@@ -1,0 +1,18 @@
+.program-section {
+  background-image: url("../images/program/decor-mob.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 0 center;
+  @media screen and (max-width: 479px) {
+    background-size: 100vw;
+  }
+  @include tablet {
+    background-image: url("../images/program/decor-tab.svg");
+    background-repeat: no-repeat;
+    background-size: 768px;
+  }
+  @include desktop {
+    background-image: url("../images/program/decor-desk.svg");
+    background-repeat: no-repeat;
+    background-size: 1200px;
+  }
+}
