@@ -28,22 +28,38 @@
   width: 100%;
   &:hover {
     border: 1px solid #f3848c;
+    transition: border $time-hover $time-function;
   }
 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
-  gap: 0px;
-  //   min-height: 100%;
+  gap: 30px;
+
+  @media screen and (max-width: 767px) {
+    background-image: url('../images/price/bgpricedonutstabl.png');
+    background-repeat: no-repeat;
+    background-position: center bottom 95px;
+  }
+
   @include tablet {
     width: calc((100% - 28px) / 3);
     padding: 20px 8px 20px 8px;
+    min-height: 580px;
+    gap: 0px;
+    background-image: url('../images/price/bgpricedonutstabl.png');
+    background-repeat: no-repeat;
+    background-position: center bottom 95px;
   }
   @include desktop {
     width: calc((100% - 64px) / 3);
-    padding: 28px 8px 40px 8px;
+    padding: 28px 10px 40px 8px;
     min-height: 610px;
+
+    background-image: url('../images/price/bgpricedonuts.png');
+    background-repeat: no-repeat;
+    background-position: center bottom 95px;
   }
 }
 
@@ -64,6 +80,10 @@
 
   display: flex;
   gap: 10px;
+  @include tablet {
+    font-size: 16px;
+    line-height: 1.25;
+  }
 }
 
 .price-item::before {
