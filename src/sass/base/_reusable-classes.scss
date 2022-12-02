@@ -24,3 +24,21 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+.section__title {
+  font-family: 'Montserrat Alternates';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.22;
+
+  text-align: center;
+
+  color: #2e2520;
+
+  @include tablet {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.21;
+  }
+}
