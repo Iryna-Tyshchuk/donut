@@ -32,9 +32,11 @@
 
   @include tablet {
     width: calc((100% - 28px) / 3);
+    padding: 20px 8px 20px 8px;
   }
   @include desktop {
     width: calc((100% - 64px) / 3);
+    padding: 28px 8px 40px 8px;
   }
 }
 
@@ -74,6 +76,15 @@
   line-height: 1.22;
 
   color: #3c322d;
+}
+.price-item::before {
+  content: ' ';
+  width: 24px;
+  height: 24px;
+  background-image: url('../images/itemtest.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .price-subtitle {
