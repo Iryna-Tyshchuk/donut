@@ -1,3 +1,43 @@
+.price-title {
+  margin-bottom: 27px;
+  @include tablet {
+    margin-bottom: 31px;
+  }
+  @include desktop {
+    margin-bottom: 27px;
+  }
+}
+
+.price-box__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  @include tablet {
+    flex-wrap: nowrap;
+    gap: 14px;
+  }
+  @include desktop {
+    gap: 32px;
+  }
+}
+
+.price-box__item {
+  padding: 20px 19px 20px 8px;
+  box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
+  border-radius: 25px;
+  width: 100%;
+  &:hover {
+    border: 1px solid #f3848c;
+  }
+
+  @include tablet {
+    width: calc((100% - 28px) / 3);
+  }
+  @include desktop {
+    width: calc((100% - 64px) / 3);
+  }
+}
+
 .btn {
   width: 145px;
   height: 40px;
@@ -13,4 +53,28 @@
   text-align: center;
 
   color: #ffffff;
+  //   margin: 0 auto;
+}
+
+.price-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.price-item {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22;
+
+  color: #3c322d;
+}
+
+.price-subtitle {
+  margin-bottom: 16px;
+  @include desktop {
+    margin-bottom: 40px;
+  }
 }
