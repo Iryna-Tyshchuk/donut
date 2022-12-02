@@ -37,8 +37,8 @@
   font-family: 'Montserrat Alternates';
   font-style: normal;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 1.22;
+  font-size: 24px;
+  line-height: 1.2;
 
   text-align: center;
 
@@ -64,4 +64,37 @@
     font-size: 20px;
     line-height: 1.2;
   }
+}
+
+.btn {
+  width: 145px;
+  height: 40px;
+  background: #f3848c;
+  border-radius: 25px;
+  border: transparent;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+
+  color: #ffffff;
+  filter: drop-shadow(10px 15px 25px rgba(232, 183, 183, 0.45));
+  &:hover,
+  &:focus {
+    color: #f3848c;
+    background: #ffffff;
+    border: 1px solid #f3848c;
+  }
+  &:active {
+    color: #ffffff;
+    background: #f3848c;
+    border: 1px solid #ffffff;
+    box-shadow: inset 0px 4px 4px rgba(107, 66, 66, 0.25);
+  }
+  transition: color $time-hover $time-function,
+    background-color $time-hover $time-function,
+    border-color $time-hover $time-function;
 }
