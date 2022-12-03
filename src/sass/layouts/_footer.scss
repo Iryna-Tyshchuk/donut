@@ -1,0 +1,25 @@
+.footer-information__link {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom:0 ;
+}
+.footer-information__icon {
+  @include tablet {
+    visibility: hidden;
+  }
+  @include desktop {
+    visibility: hidden;
+  }
+}
+.footer-mobile__picture {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+
+  @include tablet {
+    visibility: hidden;
+  }
+  @include desktop {
+    visibility: hidden;
+  }
+}

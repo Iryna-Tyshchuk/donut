@@ -1,0 +1,60 @@
+
+.container-contact {
+    @include desktop {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  .section__title{
+      margin-bottom: 27px;
+  }
+  .contact__subtitle {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    text-align: center;
+    color: #2e2520;
+    margin-bottom: 16px;
+    @include desktop {
+      font-size: 18px;
+      line-height: calc(22 / 18);
+  
+    }
+  }
+  .contact__btn{
+    margin-bottom: 29px;
+    @include tablet {
+      margin-bottom: 38px;
+    }
+    @include desktop {
+      margin-bottom: 48px;
+    }
+  }
+  .contact__form{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+  .contact__input{
+      border: none;
+      background-color: transparent;
+      width: 280px;
+      border-bottom: 1px solid #000;
+      margin-bottom: 20px;
+      
+  }
+  .contact-social__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+  }
+  .social-link__icon:hover,
+  .social-link__icon:focus{
+    fill:#F3848C ;
+  }
+  
