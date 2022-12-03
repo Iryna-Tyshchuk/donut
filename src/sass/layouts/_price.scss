@@ -1,3 +1,23 @@
+.price {
+  background-image: url('../images/price/pricedecormob.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  @include tablet {
+    background-image: url('../images/price/pricedecortabltop.png'),
+      url('../images/price/pricedecortablbottom.png');
+    background-repeat: no-repeat;
+    background-position: top center, bottom left 364px;
+    background-size: contain, 100px;
+  }
+  @include desktop {
+    background-image: url('../images/price/pricedecordesktop.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+  }
+}
+
 .price-title {
   margin-bottom: 27px;
   @include tablet {
@@ -22,6 +42,7 @@
 }
 
 .price-box__item {
+  background: #fafbfb;
   padding: 20px 19px 20px 8px;
   box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
   border-radius: 25px;
