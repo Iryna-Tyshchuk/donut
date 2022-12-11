@@ -1,21 +1,21 @@
 .header {
   position: absolute;
   width: 100%;
-}
 
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  @include tablet {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-  @include desktop {
-    padding-left: 10px;
-    padding-top: 36px;
-    justify-content: flex-start;
-    gap: 55px;
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include tablet {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+    @include desktop {
+      padding-left: 10px;
+      padding-top: 36px;
+      justify-content: flex-start;
+      gap: 55px;
+    }
   }
 }
 
@@ -63,6 +63,7 @@
 
 .menu-open {
   border: none;
+  padding: 0;
   background-color: transparent;
   @include desktop {
     display: none;
@@ -72,61 +73,90 @@
 .hero {
   padding-top: 86px;
   padding-bottom: 8px;
-  background-image: url(../images/header-images/bg-hero-mob-min.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-image: url(../images/header-images/decor-mob.svg),
+    url(../images/header-images/bg-hero-mob-min.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 104px left 38px, center;
+  background-size: 50px, cover;
   @include retina {
-    background-image: url(../images/header-images/bg-hero-mob@2x-min.jpg);
+    background-image: url(../images/header-images/decor-mob.svg),
+      url(../images/header-images/bg-hero-mob@2x-min.jpg);
   }
   @include tablet {
     padding-top: 98px;
     padding-bottom: 43px;
-    background-image: url(../images/header-images/bg-hero-tb-min.jpg);
+    background-image: url(../images/header-images/decor-mob.svg),
+      url(../images/header-images/bg-hero-tb-min.jpg);
+    background-position: top 92px left 253px, center;
+    background-size: 100px, cover;
     @include retina {
-      background-image: url(../images/header-images/bg-hero-tb@2x-min.jpg);
+      background-image: url(../images/header-images/decor-mob.svg),
+        url(../images/header-images/bg-hero-tb@2x-min.jpg);
     }
   }
   @include desktop {
     padding-top: 171px;
     padding-bottom: 90px;
-    background-image: url(../images/header-images/bg-hero-min.jpg);
+    background-image: url(../images/header-images/decor-dt.svg),
+      url(../images/header-images/bg-hero-min.jpg);
+    background-position: top 171px left 449px, center;
+    background-size: 150px, cover;
     @include retina {
-      background-image: url(../images/header-images/bg-hero@2x-min.jpg);
+      background-image: url(../images/header-images/decor-dt.svg),
+        url(../images/header-images/bg-hero@2x-min.jpg);
     }
   }
-}
 
-.hero-title {
-  font-family: Montserrat Alternates;
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-  text-align: center;
-  color: #3c322d;
-  @include tablet {
-    max-width: 319px;
-    font-size: 30px;
-    line-height: 1.22;
-    text-align: left;
+  &-container {
+    padding-left: 20px;
+    @include tablet {
+      padding-left: 32px;
+    }
+    @include desktop {
+      padding-left: 16px;
+    }
   }
-}
 
-.hero-text {
-  margin-top: 18px;
-  margin-bottom: 28px;
-  font-family: Montserrat Alternates;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.25;
-  letter-spacing: 0em;
-  text-align: center;
-  color: #3c322d;
-  @include tablet {
-    margin-top: 10px;
-    margin-bottom: 24px;
-    text-align: left;
+  &-title {
+    font-family: Montserrat Alternates;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #3c322d;
+    @include tablet {
+      max-width: 319px;
+      font-size: 30px;
+      line-height: 1.22;
+      text-align: left;
+    }
+    @include desktop {
+      max-width: 757px;
+      font-size: 60px;
+      line-height: 1.08;
+    }
+  }
+
+  &-text {
+    margin-top: 18px;
+    margin-bottom: 28px;
+    font-family: Montserrat Alternates;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #3c322d;
+    @include tablet {
+      margin-top: 10px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+    @include desktop {
+      font-size: 24px;
+      line-height: 1.2;
+    }
   }
 }
 
