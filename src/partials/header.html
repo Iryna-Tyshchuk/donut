@@ -59,6 +59,59 @@
       </svg>
     </button>
   </div>
+  <div class="mobile-menu is hidden" data-menu>
+    <picture>
+      <source
+        srcset="
+          ./images/header-images/logo-tb-min.png    1x,
+          ./images/header-images/logo-tb@2x-min.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          ./images/header-images/logo-mob-min.png    1x,
+          ./images/header-images/logo-mob@2x-min.png 2x
+        "
+        media="(max-width: 767px)"
+      />
+      <img
+        src="./images/header-images/logo-min.png"
+        alt="site logo"
+        class="logo"
+        width="158"
+        height="70"
+      />
+    </picture>
+    <button type="button" class="menu-close" data-menu-close>
+      <svg width="32" height="32" class="icon-menu-close">
+        <use href="./images/icons.svg#icon-close-btn"></use>
+      </svg>
+    </button>
+    <nav class="navigation-burger">
+      <ul class="navigation-list-burger">
+        <li class="navigation-item-burger">
+          <a href="#" class="navigation-link-burger">About us</a>
+        </li>
+        <li class="navigation-item-burger">
+          <a href="#" class="navigation-link-burger">Program</a>
+        </li>
+        <li class="navigation-item-burger">
+          <a href="#" class="navigation-link-burger">Speakers</a>
+        </li>
+        <li class="navigation-item-burger">
+          <a href="#" class="navigation-link-burger">Price</a>
+        </li>
+        <li class="navigation-item-burger">
+          <a href="#" class="navigation-link-burger">Reviews</a>
+        </li>
+        <li class="navigation-item-burger">
+          <a href="#" class="navigation-link-burger">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
 </header>
 
 <section class="hero">
