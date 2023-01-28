@@ -61,59 +61,61 @@
   </div>
 
   <div class="mobile-menu is-hidden" data-menu>
-    <div class="mobile-wrap">
-      <picture>
-        <source
-          srcset="
-            ./images/header-images/logo-tb-min.png    1x,
-            ./images/header-images/logo-tb@2x-min.png 2x
-          "
-          media="(min-width: 768px)"
-        />
-        <source
-          srcset="
-            ./images/header-images/logo-mob-min.png    1x,
-            ./images/header-images/logo-mob@2x-min.png 2x
-          "
-          media="(max-width: 767px)"
-        />
-        <img
-          src="./images/header-images/logo-min.png"
-          alt="site logo"
-          class="logo"
-          width="158"
-          height="70"
-        />
-      </picture>
-      <button type="button" class="menu-close" data-menu-close>
-        <svg width="32" height="32" class="icon-menu-close">
-          <use href="./images/header-images/ep_close.svg"></use>
-        </svg>
-      </button>
-    </div>
+    <div class="mobile-container">
+      <div class="mobile-wrap">
+        <picture>
+          <source
+            srcset="
+              ./images/header-images/logo-tb-min.png    1x,
+              ./images/header-images/logo-tb@2x-min.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/header-images/logo-mob-min.png    1x,
+              ./images/header-images/logo-mob@2x-min.png 2x
+            "
+            media="(max-width: 767px)"
+          />
+          <img
+            src="./images/header-images/logo-min.png"
+            alt="site logo"
+            class="logo"
+            width="158"
+            height="70"
+          />
+        </picture>
+        <button type="button" class="menu-close" data-menu-close>
+          <svg width="19" height="19" class="icon-menu-close">
+            <use href="./images/icons.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+      </div>
 
-    <nav class="navigation-burger">
-      <ul class="navigation-burger-list">
-        <li class="navigation-burger-item">
-          <a href="#" class="navigation-burger-link">About us</a>
-        </li>
-        <li class="navigation-burger-item">
-          <a href="#" class="navigation-burger-link">Program</a>
-        </li>
-        <li class="navigation-burger-item">
-          <a href="#" class="navigation-burger-link">Speakers</a>
-        </li>
-        <li class="navigation-burger-item">
-          <a href="#" class="navigation-burger-link">Price</a>
-        </li>
-        <li class="navigation-burger-item">
-          <a href="#" class="navigation-burger-link">Reviews</a>
-        </li>
-        <li class="navigation-burger-item">
-          <a href="#" class="navigation-burger-link">Contacts</a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="navigation-burger">
+        <ul class="navigation-burger-list">
+          <li class="navigation-burger-item">
+            <a href="#" class="navigation-burger-link">About us</a>
+          </li>
+          <li class="navigation-burger-item">
+            <a href="#" class="navigation-burger-link">Program</a>
+          </li>
+          <li class="navigation-burger-item">
+            <a href="#" class="navigation-burger-link">Speakers</a>
+          </li>
+          <li class="navigation-burger-item">
+            <a href="#" class="navigation-burger-link">Price</a>
+          </li>
+          <li class="navigation-burger-item">
+            <a href="#" class="navigation-burger-link">Reviews</a>
+          </li>
+          <li class="navigation-burger-item">
+            <a href="#" class="navigation-burger-link">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
 
