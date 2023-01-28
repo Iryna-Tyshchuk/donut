@@ -4,11 +4,14 @@
 
   &-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    padding-top: 16px;
+
     @include tablet {
       padding-left: 32px;
       padding-right: 32px;
+      padding-top: 24px;
     }
     @include desktop {
       padding-left: 10px;
@@ -20,11 +23,9 @@
 }
 
 .logo {
-  margin-top: 16px;
   width: 108px;
   height: 50px;
   @include tablet {
-    margin-top: 24px;
     width: 106px;
     height: 46px;
   }
@@ -62,7 +63,7 @@
 }
 
 .menu-open {
-  border: none;
+  // border: none;
   padding: 0;
   background-color: transparent;
   @include desktop {
@@ -108,7 +109,6 @@
   }
 
   &-container {
-    padding-left: 20px;
     @include tablet {
       padding-left: 32px;
     }
@@ -217,4 +217,99 @@
 .social-link:focus .social-icon,
 .social-link:active .social-icon {
   fill: #f3848c;
+}
+
+.mobile-menu {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: absolute;
+  padding: 16px 20px 0;
+  background-color: #e5e2e3;
+  background-image: url(../images/header-images/decor-tb-14.svg),
+    url(../images/header-images/decor-mob-9.svg),
+    url(../images/header-images/decor-mob-3.svg);
+  background-repeat: no-repeat;
+  background-position: top 66px left 270px, top 382px left 286px,
+    top 487px left -16px;
+
+  @include tablet {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 24px;
+    background-image: url(../images/header-images/decor-tb-14.svg),
+      url(../images/header-images/decor-tb-9.svg),
+      url(../images/header-images/decor-tb-3.svg),
+      url(../images/header-images/decor-tb-14.svg),
+      url(../images/header-images/decor-tb-9.svg),
+      url(../images/header-images/decor-tb-3.svg);
+    background-repeat: no-repeat;
+    background-position: top 51px left 222px, top 456px left 242px,
+      top 463px left 636px, top 684px left 23px, top 744px left 428px,
+      top 863px left 594px;
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 46px;
+
+  @include tablet {
+    margin-bottom: 70px;
+  }
+}
+
+.menu-close {
+  background-color: transparent;
+  // border: none;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+}
+
+.icon-menu-close {
+  fill: #000;
+}
+
+.navigation-burger-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+
+  @include tablet {
+    gap: 60px;
+  }
+}
+
+.navigation-burger-link {
+  font-family: Montserrat Alternates;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.22;
+  text-align: left;
+  color: #3c322d;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(
+      180deg,
+      rgba(248, 110, 103, 0.63) 0%,
+      rgba(253, 86, 143, 0.86) 100%
+    );
+    color: #ffffff;
+    box-shadow: 0px 7px 27px -2px #fd588c59;
+  }
+
+  @include tablet {
+    font-size: 40px;
+  }
 }
