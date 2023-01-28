@@ -1,0 +1,131 @@
+.price {
+  background-image: url('../images/price/pricedecormob.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  @include tablet {
+    background-image: url('../images/price/pricedecortabltop.png'),
+      url('../images/price/pricedecortablbottom.png');
+    background-repeat: no-repeat;
+    background-position: top center, bottom left 364px;
+    background-size: contain, 100px;
+  }
+  @include desktop {
+    background-image: url('../images/price/pricedecordesktop.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+  }
+}
+
+.price-title {
+  margin-bottom: 27px;
+  @include tablet {
+    margin-bottom: 31px;
+  }
+  @include desktop {
+    margin-bottom: 27px;
+  }
+}
+
+.price-box__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  @include tablet {
+    flex-wrap: nowrap;
+    gap: 14px;
+  }
+  @include desktop {
+    gap: 32px;
+  }
+}
+
+.price-box__item {
+  background: #fafbfb;
+  padding: 20px 19px 20px 8px;
+  box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
+  border-radius: 25px;
+  width: 100%;
+  &:hover {
+    border: 1px solid #f3848c;
+    transition: border $time-hover $time-function;
+  }
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 30px;
+
+  @media screen and (max-width: 767px) {
+    background-image: url('../images/price/bgpricedonutstabl.png');
+    background-repeat: no-repeat;
+    background-position: center bottom 95px;
+  }
+
+  @include tablet {
+    width: calc((100% - 28px) / 3);
+    padding: 20px 8px 20px 8px;
+    min-height: 580px;
+    gap: 0px;
+    background-image: url('../images/price/bgpricedonutstabl.png');
+    background-repeat: no-repeat;
+    background-position: center bottom 95px;
+  }
+  @include desktop {
+    width: calc((100% - 64px) / 3);
+    padding: 28px 10px 40px 8px;
+    min-height: 610px;
+
+    background-image: url('../images/price/bgpricedonuts.png');
+    background-repeat: no-repeat;
+    background-position: center bottom 95px;
+  }
+}
+
+.price-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.price-item {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.22;
+
+  color: #3c322d;
+
+  display: flex;
+  gap: 10px;
+  @include tablet {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.price-item::before {
+  content: ' ';
+  min-width: 24px;
+  min-height: 24px;
+  background-image: url(../images/itemtest.svg);
+
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: center;
+  align-self: flex-start;
+}
+
+.price-subtitle {
+  margin-bottom: 16px;
+  @include desktop {
+    margin-bottom: 40px;
+  }
+}
+
+.price-btn {
+  align-self: flex-end;
+}
