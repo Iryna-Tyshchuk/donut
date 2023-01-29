@@ -1,15 +1,15 @@
 .about {
-  padding-left: 20px;
-  padding-right: 20px;
+  // padding-left: 20px;
+  // padding-right: 20px;
   display: flex;
     flex-wrap: wrap;
 
     background-image: url(../images/about-us-circle-mobile.svg);
-    //background-repeat: no-repeat;
-  @include tablet {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
+    background-repeat: no-repeat;
+  // @include tablet {
+  //   padding-left: 32px;
+  //   padding-right: 32px;
+  // }
   &__title {
     margin-top: 28px;
     margin-bottom: 8px;
