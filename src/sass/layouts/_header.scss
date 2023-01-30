@@ -1,0 +1,322 @@
+.header {
+  position: absolute;
+  width: 100%;
+
+  &-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 16px;
+
+    @include tablet {
+      padding-left: 32px;
+      padding-right: 32px;
+      padding-top: 24px;
+    }
+    @include desktop {
+      padding-left: 16px;
+      padding-top: 36px;
+      justify-content: flex-start;
+      gap: 55px;
+    }
+  }
+}
+
+.logo {
+  width: 108px;
+  height: 50px;
+  @include tablet {
+    width: 106px;
+    height: 46px;
+  }
+  @include desktop {
+    margin-top: 0;
+    width: 158px;
+    height: 70px;
+  }
+}
+
+.navigation-list {
+  display: none;
+  @include desktop {
+    display: flex;
+    gap: 20px;
+  }
+}
+.navigation-link {
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: left;
+  color: #3c322d;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(
+      180deg,
+      rgba(248, 110, 103, 0.63) 0%,
+      rgba(253, 86, 143, 0.86) 100%
+    );
+    color: #fcfcfc;
+    padding: 4px 8px;
+    box-shadow: 0px 7px 27px -2px rgba(253, 88, 140, 0.35);
+  }
+}
+
+.menu-open {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  @include desktop {
+    display: none;
+  }
+}
+
+.hero {
+  padding-top: 86px;
+  padding-bottom: 8px;
+  background-image: url(../images/header-images/decor-mob.svg),
+    url(../images/header-images/bg-hero-mob-min.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 104px left 38px, center;
+  background-size: 50px, cover;
+  @include retina {
+    background-image: url(../images/header-images/decor-mob.svg),
+      url(../images/header-images/bg-hero-mob@2x-min.jpg);
+  }
+  @include tablet {
+    padding-top: 98px;
+    padding-bottom: 43px;
+    background-image: url(../images/header-images/decor-mob.svg),
+      url(../images/header-images/bg-hero-tb-min.jpg);
+    background-position: top 92px left 253px, center;
+    background-size: 100px, cover;
+    @include retina {
+      background-image: url(../images/header-images/decor-mob.svg),
+        url(../images/header-images/bg-hero-tb@2x-min.jpg);
+    }
+  }
+  @include desktop {
+    padding-top: 171px;
+    padding-bottom: 90px;
+    background-image: url(../images/header-images/decor-dt.svg),
+      url(../images/header-images/bg-hero-min.jpg);
+    background-position: top 171px left 449px, center;
+    background-size: 150px, cover;
+    @include retina {
+      background-image: url(../images/header-images/decor-dt.svg),
+        url(../images/header-images/bg-hero@2x-min.jpg);
+    }
+  }
+
+  &-container {
+    @include tablet {
+      padding-left: 32px;
+    }
+    @include desktop {
+      padding-left: 16px;
+    }
+  }
+
+  &-title {
+    font-family: Montserrat Alternates;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    text-align: center;
+    color: #3c322d;
+    @include tablet {
+      max-width: 319px;
+      font-size: 30px;
+      line-height: 1.22;
+      text-align: left;
+    }
+    @include desktop {
+      max-width: 757px;
+      font-size: 60px;
+      line-height: 1.08;
+    }
+  }
+
+  &-text {
+    margin-top: 18px;
+    margin-bottom: 28px;
+    font-family: Montserrat Alternates;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #3c322d;
+    @include tablet {
+      margin-top: 10px;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+    @include desktop {
+      font-size: 24px;
+      line-height: 1.2;
+      margin-top: 20px;
+      margin-bottom: 28px;
+    }
+  }
+}
+
+.reg-link {
+  display: block;
+  margin: 0 auto;
+  padding: 9px 35px;
+  width: 145px;
+  height: 40px;
+  border-radius: 25px;
+  box-shadow: 10px 15px 25px 0px #e8b7b773;
+  background-color: #f3848c;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+  border: transparent;
+
+  &:hover,
+  &:focus {
+    background-color: #876655;
+    font-family: Caveat Brush;
+  }
+  &:active {
+    background-color: #674d40;
+    font-family: Caveat Brush;
+  }
+
+  @include tablet {
+    margin-left: 0;
+    margin-right: auto;
+    padding: 9px 35px;
+  }
+}
+
+.social-list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 28px;
+  @include tablet {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+  @include desktop {
+    margin-top: 32px;
+  }
+}
+
+.social-item {
+  width: 16px;
+  height: 16px;
+}
+
+.social-link {
+  width: 100%;
+  height: 100%;
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon,
+.social-link:active .social-icon {
+  fill: #f3848c;
+}
+
+.mobile-menu {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  position: absolute;
+  background-color: #e5e2e3;
+  background-image: url(../images/header-images/decor-tb-14.svg),
+    url(../images/header-images/decor-mob-9.svg),
+    url(../images/header-images/decor-mob-3.svg);
+  background-repeat: no-repeat;
+  background-position: top 66px left 270px, top 382px left 286px,
+    top 487px left -16px;
+
+  @include tablet {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 24px;
+    background-image: url(../images/header-images/decor-tb-14.svg),
+      url(../images/header-images/decor-tb-9.svg),
+      url(../images/header-images/decor-tb-3.svg),
+      url(../images/header-images/decor-tb-14.svg),
+      url(../images/header-images/decor-tb-9.svg),
+      url(../images/header-images/decor-tb-3.svg);
+    background-repeat: no-repeat;
+    background-position: top 51px left 222px, top 456px left 242px,
+      top 463px left 636px, top 684px left 23px, top 744px left 428px,
+      top 863px left 594px;
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-container {
+  height: 100%;
+  padding-top: 16px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.mobile-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.menu-close {
+  display: block;
+  background-color: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+  padding: 6.5px;
+}
+
+.navigation-burger-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin-top: 46px;
+  margin-bottom: 52px;
+
+  @include tablet {
+    gap: 60px;
+    margin-top: 70px;
+    margin-bottom: 296px;
+  }
+}
+
+.navigation-burger-link {
+  font-family: Montserrat Alternates;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.22;
+  text-align: left;
+  color: #3c322d;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(
+      180deg,
+      rgba(248, 110, 103, 0.63) 0%,
+      rgba(253, 86, 143, 0.86) 100%
+    );
+    color: #ffffff;
+    box-shadow: 0px 7px 27px -2px #fd588c59;
+  }
+
+  @include tablet {
+    font-size: 40px;
+  }
+}
