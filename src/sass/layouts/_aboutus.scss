@@ -1,15 +1,9 @@
 .about {
-  // padding-left: 20px;
-  // padding-right: 20px;
   display: flex;
   flex-wrap: wrap;
-
   background-image: url(../images/about-us-circle-mobile.svg);
   background-repeat: no-repeat;
-  // @include tablet {
-  //   padding-left: 32px;
-  //   padding-right: 32px;
-  // }
+
   &__title {
     margin-top: 28px;
     margin-bottom: 8px;
@@ -26,16 +20,9 @@
     }
   }
   &__text {
-    // font-family: 'Montserrat';
-    // font-style: normal;
-    // font-weight: 400;
-    // font-size: 16px;
     line-height: 1.25;
 
     @include desktop {
-      // font-family: 'Montserrat';
-      // font-style: normal;
-      // font-weight: 400;
       font-size: 18px;
       line-height: 1.22;
     }
@@ -50,12 +37,8 @@
     }
   }
   img {
-    border-radius: 24px;
+    border-radius: 38px;
   }
-
-  // &.about {
-
-  // }
 }
 .view {
   border: none;
@@ -72,7 +55,9 @@
   .text__more {
     padding-top: 1em;
   }
-  @include mobile {
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding: 16px;
     .view__more {
       display: block;
     }
