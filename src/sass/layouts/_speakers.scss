@@ -1,0 +1,83 @@
+.title-speakers{
+    font-family: Montserrat Alternates;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: calc(29.26 / 24);
+    text-align: center;
+    margin-bottom: 12px;
+    
+
+    @include tablet {
+        font-size: 32px;
+        line-height: calc(39/32);
+        margin-bottom: 20px;
+       }
+       
+   @include desktop {
+    font-size: 32px;
+    line-height: calc(39/32);
+    margin-bottom: 5px;
+    }
+}
+
+.speakers__item {
+  width: calc((100% - 20px) / 2);
+  @include tablet {
+    width: calc((100% - 96px) / 4);
+  }
+}
+
+.speakers__list{
+gap: 20px;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+text-align: center;
+@include tablet {
+  flex-wrap: nowrap;
+  }
+}
+
+.speakers__item {
+  width: calc((100% - 20px) / 2);
+  @include tablet {
+    width: calc((100% - 96px) / 4);
+  }
+}
+
+.speakers__name{
+font-weight: 600;
+line-height: calc(19.5 / 16);
+margin-bottom: 12px;
+margin-top: 12px;
+align-items: center;
+text-align: center;
+
+@include tablet {
+    font-size: 18px;
+    line-height: calc(21.94/18);
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  @include desktop {
+    font-size: 18px;
+    line-height: calc(21.94/18);
+    }
+  
+}
+.speakers__description{
+font-size: 12px;
+font-weight: 500;
+line-height: calc(14.63/12);
+text-align: center;
+@include tablet {
+    font-size: 14px;
+    line-height: calc(17.07/14);
+  }
+  @include desktop {
+    font-size: 16px;
+    line-height: calc(19.5/16);
+  }
+}
+
