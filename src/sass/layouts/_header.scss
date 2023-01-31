@@ -169,7 +169,6 @@
   width: 145px;
   height: 40px;
   border-radius: 25px;
-  box-shadow: 10px 15px 25px 0px #e8b7b773;
   background-color: #f3848c;
   color: #ffffff;
   font-size: 18px;
@@ -179,13 +178,19 @@
 
   &:hover,
   &:focus {
-    background-color: #876655;
-    font-family: Caveat Brush;
+    color: #f3848c;
+    background: #ffffff;
+    border: 1px solid #f3848c;
   }
   &:active {
-    background-color: #674d40;
-    font-family: Caveat Brush;
+    color: #ffffff;
+    background: #f3848c;
+    border: 1px solid #ffffff;
+    box-shadow: inset 0px 4px 4px rgba(107, 66, 66, 0.25);
   }
+  transition: color $time-hover $time-function,
+    background-color $time-hover $time-function,
+    border-color $time-hover $time-function;
 
   @include tablet {
     margin-left: 0;
@@ -232,7 +237,7 @@
   background-color: #e5e2e3;
   background-image: url(../images/header-images/decor-tb-14.svg),
     url(../images/header-images/decor-mob-9.svg),
-    url(../images/header-images/decor-mob-3.svg);
+    url(../images/header-images/decor-tb-3.svg);
   background-repeat: no-repeat;
   background-position: top 66px left 270px, top 382px left 286px,
     top 487px left -16px;
