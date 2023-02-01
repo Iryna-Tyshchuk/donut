@@ -21,7 +21,26 @@
   background-size: cover;
 
   box-shadow: 10px 15px 25px rgba(210, 201, 201, 0.45);
+  @include tablet {
+    background-image: url('../images/registration/donatsbgregtabl.png'),
+      // background-repeat: no-repeat;
+      // background-position: bottom left;
+      // background-size: auto,
+      url('../images/registration/regwhitebgtabl.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: auto;
+    display: flex;
+  }
+  @include desktop {
+    background-image: url('../images/registration/bgregdesk.png'),
+      url('../images/registration/whitebgdesk.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: auto;
+  }
 }
+
 .registration-info {
   font-weight: 500;
   font-size: 18px;
@@ -33,7 +52,7 @@
   padding-bottom: 20px;
   border-bottom: 1px solid #ffffff;
   @include tablet {
-    color: #3c322d;
+    color: #000;
   }
 }
 
@@ -44,16 +63,19 @@
 
   color: #ffffff;
   padding-top: 20px;
+  @include tablet {
+    color: #000;
+  }
 }
-.registration-form {
-  padding-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
+// .registration-form {
+//   padding-top: 20px;
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 20px;
+// }
 
 .registration-input {
-  width: 100%;
+  // width: 100%;
   color: #ffffff;
 
   background-color: transparent;
@@ -78,6 +100,12 @@
 }
 
 .registration-btn {
-  //   margin: 0 auto;
+  margin: 0 auto;
   margin-top: 32px;
+}
+.wrapper_reg {
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
